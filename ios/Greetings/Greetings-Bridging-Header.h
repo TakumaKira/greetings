@@ -1,0 +1,12 @@
+//
+//  Greetings-Bridging-Header.h
+//  Greetings
+//
+//  Created by Kira on 2023/05/02.
+//
+
+#ifndef Greetings_Bridging_Header_h
+#define Greetings_Bridging_Header_h
+
+
+#endif /* Greetings_Bridging_Header_h */
