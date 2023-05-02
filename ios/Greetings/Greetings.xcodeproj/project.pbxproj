@@ -16,6 +16,9 @@
 		4FBEEAFC2A013B8100EA1EF2 /* GreetingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEEAFB2A013B8100EA1EF2 /* GreetingsTests.swift */; };
 		4FBEEB062A013B8100EA1EF2 /* GreetingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEEB052A013B8100EA1EF2 /* GreetingsUITests.swift */; };
 		4FBEEB082A013B8100EA1EF2 /* GreetingsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEEB072A013B8100EA1EF2 /* GreetingsUITestsLaunchTests.swift */; };
+		4FBEEB162A013BD000EA1EF2 /* libgreetings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBEEB152A013BC200EA1EF2 /* libgreetings.a */; };
+		4FBEEB182A013BF700EA1EF2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBEEB172A013BEE00EA1EF2 /* libresolv.tbd */; };
+		4FBEEB1C2A013D5A00EA1EF2 /* RustGreetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEEB1A2A013C9700EA1EF2 /* RustGreetings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,11 @@
 		4FBEEB012A013B8100EA1EF2 /* GreetingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreetingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBEEB052A013B8100EA1EF2 /* GreetingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsUITests.swift; sourceTree = "<group>"; };
 		4FBEEB072A013B8100EA1EF2 /* GreetingsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4FBEEB152A013BC200EA1EF2 /* libgreetings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgreetings.a; path = ../../cargo/target/universal/release/libgreetings.a; sourceTree = "<group>"; };
+		4FBEEB172A013BEE00EA1EF2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		4FBEEB192A013C1A00EA1EF2 /* Greetings-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Greetings-Bridging-Header.h"; sourceTree = "<group>"; };
+		4FBEEB1A2A013C9700EA1EF2 /* RustGreetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustGreetings.swift; sourceTree = "<group>"; };
+		4FBEEB1B2A013D1E00EA1EF2 /* greetings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = greetings.h; path = ../../cargo/src/greetings.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBEEB162A013BD000EA1EF2 /* libgreetings.a in Frameworks */,
+				4FBEEB182A013BF700EA1EF2 /* libresolv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +89,14 @@
 		4FBEEAD82A013B7F00EA1EF2 = {
 			isa = PBXGroup;
 			children = (
+				4FBEEB1B2A013D1E00EA1EF2 /* greetings.h */,
+				4FBEEB1A2A013C9700EA1EF2 /* RustGreetings.swift */,
+				4FBEEB192A013C1A00EA1EF2 /* Greetings-Bridging-Header.h */,
 				4FBEEAE32A013B7F00EA1EF2 /* Greetings */,
 				4FBEEAFA2A013B8100EA1EF2 /* GreetingsTests */,
 				4FBEEB042A013B8100EA1EF2 /* GreetingsUITests */,
 				4FBEEAE22A013B7F00EA1EF2 /* Products */,
+				4FBEEB142A013BC200EA1EF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +139,15 @@
 				4FBEEB072A013B8100EA1EF2 /* GreetingsUITestsLaunchTests.swift */,
 			);
 			path = GreetingsUITests;
+			sourceTree = "<group>";
+		};
+		4FBEEB142A013BC200EA1EF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FBEEB172A013BEE00EA1EF2 /* libresolv.tbd */,
+				4FBEEB152A013BC200EA1EF2 /* libgreetings.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBEEB1C2A013D5A00EA1EF2 /* RustGreetings.swift in Sources */,
 				4FBEEAE92A013B7F00EA1EF2 /* ViewController.swift in Sources */,
 				4FBEEAE52A013B7F00EA1EF2 /* AppDelegate.swift in Sources */,
 				4FBEEAE72A013B7F00EA1EF2 /* SceneDelegate.swift in Sources */,
@@ -449,10 +473,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/../../cargo/target/universal/release";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirakiraworx.Greetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(PROJECT_DIR)/Greetings-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,10 +503,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/../../cargo/target/universal/release";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirakiraworx.Greetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(PROJECT_DIR)/Greetings-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
